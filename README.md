@@ -1,2 +1,3 @@
-# upbge-3.6.12
-mise à jour de la branch 0.3.x de upbge afin d'avoir les correctif et amélioration de la série blender 3.x dans le moteur de jeu
+# upbge-36.next
+
+il s'agit d'un projet qui à pour but de faire la mise à jour de UPBGE0.36 avec les dernière version de la série Blender 3.x afin d'avoir les correctif et amélioration pour le moteur de jeu.
