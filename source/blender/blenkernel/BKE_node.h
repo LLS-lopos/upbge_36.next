@@ -971,7 +971,6 @@ void BKE_nodetree_remove_layer_n(struct bNodeTree *ntree, struct Scene *scene, i
 #define SH_NODE_SEPARATE_COLOR 7312
 #define SH_NODE_MIX 713
 #define SH_NODE_SPRITES_ANIMATION 800
-#define SH_NODE_BSDF_GAME 801
 
 /** \} */
 

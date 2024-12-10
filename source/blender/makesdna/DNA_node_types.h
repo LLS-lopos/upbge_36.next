@@ -2470,9 +2470,3 @@ typedef enum NodeCombSepColorMode {
   NODE_COMBSEP_COLOR_HSV = 1,
   NODE_COMBSEP_COLOR_HSL = 2,
 } NodeCombSepColorMode;
-/*
-typedef struct NodeShaderGame {
-    int distribution;
-    char _pad[4];
-} NodeShaderGame;
-*/

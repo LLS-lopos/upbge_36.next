@@ -112,5 +112,4 @@ void register_shader_nodes()
 
   /* UPBGE */
   register_node_type_sh_sprites_animation();
-  register_node_type_sh_bsdf_game();
 }

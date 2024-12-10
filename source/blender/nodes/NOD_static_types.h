@@ -130,7 +130,6 @@ DefNode(ShaderNode,     SH_NODE_MIX,                def_sh_mix,             "MIX
 
 /* SHADER UPBGE */
 DefNode(ShaderNode,     SH_NODE_SPRITES_ANIMATION,  0,                      "SPRITES_ANIMATION",  SpritesAnimation, "Sprites Animation", ""       )
-DefNode(ShaderNode,     SH_NODE_BSDF_GAME,          0,                      "BSDF_GAME",          BsdfGame,         "BSDF Game",         ""       )
 /* SHADER UPBGE */
 
 DefNode(CompositorNode, CMP_NODE_VIEWER,         def_cmp_viewer,         "VIEWER",         Viewer,           "Viewer",            ""              )

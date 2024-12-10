@@ -111,4 +111,3 @@ void register_node_type_sh_wireframe();
 
 /* UPBGE */
 void register_node_type_sh_sprites_animation();
-void register_node_type_sh_bsdf_game();
