@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+#ifndef DefNode
+#define DefNode(Category, ID, DefFunc, EnumName, StructName, UIName, UIDesc)
+#endif
+
+>>>>>>> 39919b439c1e02b538fb84b0c80a08b36112bc1d
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 
 /** \file
@@ -124,8 +131,9 @@ DefNode(ShaderNode,     SH_NODE_COMBINE_COLOR,      def_sh_combsep_color,   "COM
 DefNode(ShaderNode,     SH_NODE_SEPARATE_COLOR,     def_sh_combsep_color,   "SEPARATE_COLOR",     SeparateColor,    "Separate Color",    "Split a color into its individual components using multiple models")
 DefNode(ShaderNode,     SH_NODE_MIX,                def_sh_mix,             "MIX",                Mix,              "Mix",               "Mix values by a factor")
 
-/* UPBGE*/
+/* SHADER UPBGE */
 DefNode(ShaderNode,     SH_NODE_SPRITES_ANIMATION,  0,                      "SPRITES_ANIMATION",  SpritesAnimation, "Sprites Animation", ""       )
+/* SHADER UPBGE */
 
 DefNode(CompositorNode, CMP_NODE_VIEWER,         def_cmp_viewer,         "VIEWER",         Viewer,           "Viewer",            ""              )
 DefNode(CompositorNode, CMP_NODE_RGB,            0,                      "RGB",            RGB,              "RGB",               ""              )

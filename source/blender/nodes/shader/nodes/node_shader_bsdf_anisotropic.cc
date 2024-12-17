@@ -10,7 +10,7 @@ namespace blender::nodes::node_shader_bsdf_anisotropic_cc {
 
 static void node_declare(NodeDeclarationBuilder &b)
 {
-  b.add_input<decl::Color>("Color").default_value({0.8f, 0.8f, 0.8f, 1.0f});
+  b.add_input<decl::Color>("Color").default_value({1.0f, 1.0f, 1.0f, 1.0f});
   b.add_input<decl::Float>("Roughness")
       .default_value(0.5f)
       .min(0.0f)

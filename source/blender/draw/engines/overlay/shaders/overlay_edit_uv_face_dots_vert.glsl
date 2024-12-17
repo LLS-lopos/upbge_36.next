@@ -8,3 +8,4 @@ void main()
   finalColor = ((flag & FACE_UV_SELECT) != 0) ? colorFaceDot : vec4(colorWire.rgb, 1.0);
   gl_PointSize = pointSize;
 }
+

@@ -21,14 +21,14 @@ extern "C" {
 /* Blender major and minor version. */
 #define BLENDER_VERSION 306
 
-#define UPBGE_VERSION 36
+#define UPBGE_VERSION 306
 
 /* Blender patch version for bugfix releases. */
-#define BLENDER_VERSION_PATCH 2
+#define BLENDER_VERSION_PATCH 18
 /** Blender release cycle stage: alpha/beta/rc/release. */
 #define BLENDER_VERSION_CYCLE release
 
-#define UPBGE_VERSION_PATCH 1
+#define UPBGE_VERSION_PATCH 18
 /** alpha/beta/rc/release, docs use this. */
 #define UPBGE_VERSION_CYCLE release
 

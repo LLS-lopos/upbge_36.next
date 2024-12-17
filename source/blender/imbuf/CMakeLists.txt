@@ -154,6 +154,7 @@ if(WITH_IMAGE_WEBP)
   )
   list(APPEND LIB
     ${WEBP_LIBRARIES}
+    ${LIBDIR}/webp/lib/libsharpyuv.a
   )
   add_definitions(-DWITH_WEBP)
 endif()

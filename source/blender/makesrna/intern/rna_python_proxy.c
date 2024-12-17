@@ -79,7 +79,7 @@ static void rna_ProxySetProperty_set(struct PointerRNA *ptr, int value)
   pprop->itemval = value;
 }
 
-static EnumPropertyItem *rna_ProxySetProperty_itemf(bContext *UNUSED(C),
+static const EnumPropertyItem *rna_ProxySetProperty_itemf(bContext *UNUSED(C),
                                                     PointerRNA *ptr,
                                                     PropertyRNA *UNUSED(prop),
                                                     bool *r_free)
