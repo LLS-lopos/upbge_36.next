@@ -88,10 +88,6 @@ set(SRC
   nodes/node_shader_sepcomb_rgb.cc
   nodes/node_shader_sepcomb_xyz.cc
   nodes/node_shader_shader_to_rgb.cc
-<<<<<<< HEAD
-  nodes/node_shader_sprites_animation.cc
-=======
->>>>>>> 39919b439c1e02b538fb84b0c80a08b36112bc1d
   nodes/node_shader_squeeze.cc
   nodes/node_shader_subsurface_scattering.cc
   nodes/node_shader_tangent.cc

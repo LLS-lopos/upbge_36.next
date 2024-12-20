@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-#ifndef DefNode
-#define DefNode(Category, ID, DefFunc, EnumName, StructName, UIName, UIDesc)
-#endif
-
->>>>>>> 39919b439c1e02b538fb84b0c80a08b36112bc1d
 /* SPDX-License-Identifier: GPL-2.0-or-later */
 
 /** \file
