@@ -24,11 +24,11 @@ extern "C" {
 #define UPBGE_VERSION 306
 
 /* Blender patch version for bugfix releases. */
-#define BLENDER_VERSION_PATCH 18
+#define BLENDER_VERSION_PATCH 20
 /** Blender release cycle stage: alpha/beta/rc/release. */
 #define BLENDER_VERSION_CYCLE release
 
-#define UPBGE_VERSION_PATCH 18
+#define UPBGE_VERSION_PATCH 2
 /** alpha/beta/rc/release, docs use this. */
 #define UPBGE_VERSION_CYCLE release
 
