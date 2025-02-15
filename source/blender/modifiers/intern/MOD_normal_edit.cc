@@ -554,7 +554,7 @@ static Mesh *normalEditModifier_do(NormalEditModifierData *enmd,
                                           sharp_faces,
                                           clnors,
                                           true,
-                                          result->smoothresh,
+                                          result->float,
                                           nullptr,
                                           loop_normals);
   }
