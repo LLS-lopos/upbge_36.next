@@ -379,7 +379,10 @@ static void obmat_to_viewmat(RegionView3D *rv3d, Object *ob)
   invert_m4_m4(rv3d->viewmat, bmat);
 
   /* view quat calculation, needed for add object */
-  mat4_normalized_to_quat(rv3d->viewquat, rv3d->viewmat);
+  // mat4_normalized_to_quat(rv3d->viewquat, rv3d->viewmat);
+
+  /* UPBGE (to avoid an annoying assert -> will normalize anyway) */
+  mat4_to_quat(rv3d->viewquat, rv3d->viewmat);
 }
 
 void view3d_viewmatrix_set(Depsgraph *depsgraph,
