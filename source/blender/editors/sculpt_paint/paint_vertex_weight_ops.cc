@@ -739,7 +739,7 @@ static int paint_weight_gradient_modal(bContext *C, wmOperator *op, const wmEven
   Object *ob = CTX_data_active_object(C);
   int ret;
 
-  if (BKE_object_defgroup_active_index_set(ob)) {
+  if (BKE_object_defgroup_active_index_set(struct Object *ob, int new_index)) {
     BKE_report(op->reports, RPT_WARNING, "Active group is locked, aborting");
     ret = OPERATOR_CANCELLED;
   }
