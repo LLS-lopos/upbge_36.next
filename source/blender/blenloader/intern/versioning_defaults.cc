@@ -396,9 +396,9 @@ void BLO_update_defaults_startup_blend(Main *bmain, const char *app_template)
     sce->gm.mode = WO_ACTIVITY_CULLING;
     sce->gm.occlusionRes = 128;
     sce->gm.ticrate = 60;
-    sce->gm.maxlogicstep = 5;
-    sce->gm.physubstep = 1;
-    sce->gm.maxphystep = 5;
+    sce->gm.maxlogicstep = 10;
+    sce->gm.physubstep = 10;
+    sce->gm.maxphystep = 10;
     sce->gm.lineardeactthreshold = 0.8f;
     sce->gm.angulardeactthreshold = 1.0f;
     sce->gm.deactivationtime = 2.0f;

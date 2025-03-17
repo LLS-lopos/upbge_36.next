@@ -193,9 +193,9 @@
     .mode = WO_ACTIVITY_CULLING, \
     .occlusionRes = 128, \
     .ticrate = 60, \
-    .maxlogicstep = 5, \
-    .physubstep = 1, \
-    .maxphystep = 5, \
+    .maxlogicstep = 10, \
+    .physubstep = 10, \
+    .maxphystep = 10, \
     .timeScale = 1.0f, \
     .lineardeactthreshold = 0.8f, \
     .angulardeactthreshold = 1.0f, \
