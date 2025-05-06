@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2017-2023 Blender Authors
+#
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 if(WIN32 AND BUILD_MODE STREQUAL Debug)
@@ -33,7 +35,6 @@ ExternalProject_Add(external_python_site_packages
   zstandard==${ZSTANDARD_VERSION}
   autopep8==${AUTOPEP8_VERSION}
   pycodestyle==${PYCODESTYLE_VERSION}
-  toml==${TOML_VERSION}
   meson==${MESON_VERSION}
   --no-binary :all:
 )
