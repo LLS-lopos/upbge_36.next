@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2017-2023 Blender Authors
+#
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 set(PYTHON_POSTFIX)
@@ -14,6 +16,18 @@ if(WIN32)
     string(REPLACE "/" "\\" ${ResultingPath} "${MsysPath}")
   endmacro()
 
+  if(BLENDER_PLATFORM_ARM)
+    set(PYTHON_BINARY_INTERNAL ${BUILD_DIR}/python/src/external_python/PCBuild/arm64/python${PYTHON_POSTFIX}.exe)
+    set(PYTHON_BAT_ARCH arm64)
+    set(PYTHON_INSTALL_ARCH_FOLDER ${PYTHON_SRC}/PCbuild/arm64)
+    set(PYTHON_PATCH_FILE python_windows_arm64.diff)
+  else()
+    set(PYTHON_BINARY_INTERNAL ${BUILD_DIR}/python/src/external_python/PCBuild/amd64/python${PYTHON_POSTFIX}.exe)
+    set(PYTHON_BAT_ARCH x64)
+    set(PYTHON_INSTALL_ARCH_FOLDER ${PYTHON_SRC}/PCbuild/amd64)
+    set(PYTHON_PATCH_FILE python_windows_x64.diff)
+  endif()
+
   set(PYTHON_EXTERNALS_FOLDER ${BUILD_DIR}/python/src/external_python/externals)
   set(ZLIB_SOURCE_FOLDER ${BUILD_DIR}/zlib/src/external_zlib)
   set(SSL_SOURCE_FOLDER ${BUILD_DIR}/ssl/src/external_ssl)
@@ -29,6 +43,7 @@ if(WIN32)
     DOWNLOAD_DIR ${DOWNLOAD_DIR}
     URL_HASH ${PYTHON_HASH_TYPE}=${PYTHON_HASH}
     PREFIX ${BUILD_DIR}/python
+
     # Python will download its own deps and there's very little we can do about
     # that beyond placing some code in their externals dir before it tries.
     # the foldernames *HAVE* to match the ones inside pythons get_externals.cmd.
@@ -86,7 +101,7 @@ else()
     export CFLAGS=${PYTHON_CFLAGS} &&
     export CPPFLAGS=${PYTHON_CFLAGS} &&
     export LDFLAGS=${PYTHON_LDFLAGS} &&
-    export PKG_CONFIG_PATH=${LIBDIR}/ffi/lib/pkgconfig:${LIBDIR}/ssl/lib64/pkgconfig)
+    export PKG_CONFIG_PATH=${LIBDIR}/ffi/lib/pkgconfig:${LIBDIR}/ssl/lib/pkgconfig:${LIBDIR}/ssl/lib64/pkgconfig)
 
   # NOTE: untested on APPLE so far.
   if(NOT APPLE)
@@ -140,4 +155,8 @@ if(WIN32)
       DEPENDEES install
     )
   endif()
+else()
+  harvest(external_python python/bin python/bin "python${PYTHON_SHORT_VERSION}")
+  harvest(external_python python/include python/include "*h")
+  harvest(external_python python/lib python/lib "*")
 endif()

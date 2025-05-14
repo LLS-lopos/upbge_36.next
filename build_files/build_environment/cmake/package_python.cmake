@@ -7,6 +7,7 @@ if(MSVC)
   if(BUILD_MODE STREQUAL Release)
     add_custom_command(
       OUTPUT ${PYTARGET}/bin/python${PYTHON_POSTFIX}.exe
+
       COMMAND echo packaging python
       COMMAND echo this should output at ${PYTARGET}/bin/python${PYTHON_POSTFIX}.exe
       COMMAND ${CMAKE_COMMAND} -E make_directory ${PYTARGET}/libs
@@ -26,6 +27,7 @@ if(MSVC)
   if(BUILD_MODE STREQUAL Debug)
     add_custom_command(
       OUTPUT ${PYTARGET}/bin/python${PYTHON_POSTFIX}.exe
+
       COMMAND echo packaging python
       COMMAND echo this should output at ${PYTARGET}/bin/python${PYTHON_POSTFIX}.exe
       COMMAND ${CMAKE_COMMAND} -E make_directory ${PYTARGET}/libs
